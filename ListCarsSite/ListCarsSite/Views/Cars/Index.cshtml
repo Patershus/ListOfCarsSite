@@ -1,0 +1,22 @@
+﻿@model CarsIndexVM[]
+
+<table class="indexTable">
+    <thead>
+        <label asp-for="@Model.FirstOrDefault().Brand"></label>
+    </thead>
+    @foreach (var car in Model)
+    {
+        <tr>
+            @if (car.ShowAsFast)
+            {
+
+                <td style="color:blue">@car.Brand</td>
+            }
+            else
+            {
+                <td style="color:red">@car.Brand</td>
+            }
+        </tr>
+    }
+
+</table>

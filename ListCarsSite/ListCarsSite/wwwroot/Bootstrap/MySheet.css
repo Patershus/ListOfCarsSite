@@ -1,0 +1,24 @@
+﻿body {
+    vertical-align: central;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+table.navTable{
+    margin-left:auto;
+    margin-right:auto;
+    width:30%;
+}
+
+
+
+#wrapper{
+    width:60%;
+    margin:auto;
+    background-color:antiquewhite;
+}
+
+#layoutHeader, #layoutFooter {
+    background-color: brown;
+}
