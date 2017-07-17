@@ -9,8 +9,12 @@ table.navTable{
     margin-left:auto;
     margin-right:auto;
     width:30%;
+  
 }
 
+a {
+    color: whitesmoke;
+}
 
 
 #wrapper{
@@ -21,4 +25,10 @@ table.navTable{
 
 #layoutHeader, #layoutFooter {
     background-color: brown;
+    width:60%;
+}
+
+footer{
+    
+    color :whitesmoke;
 }

@@ -5,13 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="wwwroot\bootstrap-theme.css" />
-    <Content Include="wwwroot\bootstrap-theme.css.map" />
     <Content Include="wwwroot\Bootstrap\MySheet.css" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="bootstrap\" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.0.0" />

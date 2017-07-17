@@ -14,31 +14,28 @@
 
 </head>
 <body>
+    <div id="wrapper">
     <header style="background-color:brown"> 
        <br />
         <br />
+        <table class="navTable">
+    <tr>
+        <td><a asp-controller="cars" asp-action="index">Home</a> </td>
+        <td><a asp-controller="cars" asp-action="create">Create</a> </td>
+    </tr>
+</table>
     </header>
-    <div id="wrapper">
         <h1>List of cars site!</h1>
-        <nav>
-            <table class="navTable">
-                <tr>
-                    <td><a asp-controller="cars" asp-action="index">Home</a> </td>
-                    <td><a asp-controller="cars" asp-action="create">Create</a> </td>
-                  
-                </tr>
-            </table>
-        </nav>
-
 
         <div>
             @RenderBody()
         </div>
-    </div>
     <footer style="background-color:brown">
         <br />
         <br />
+        &copy; Cars inc
     </footer>
+    </div>
 
     @*<script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.1.0.min.js"></script>
     <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.min.js"></script>
