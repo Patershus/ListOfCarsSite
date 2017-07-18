@@ -23,7 +23,7 @@ namespace ListCarsSite.Controllers
         // GET: /<controller>/
         public IActionResult Index()
         {
-            var listOfCars=DataManager.ListCars();
+            //var listOfCars=DataManager.ListCars();
 
             var listOfCarsIndexVM = context.GetAllCars();
               
@@ -37,13 +37,13 @@ namespace ListCarsSite.Controllers
         }
 
         [HttpPost]
-        public IActionResult Create(CarsCreateVM createdCar)
+        public async Task<IActionResult> Create(CarsCreateVM createdCar)
         {
             if (!ModelState.IsValid)
                 return View(createdCar);
 
-            DataManager.AddCar(createdCar);
-            context.AddCar(createdCar);
+            //DataManager.AddCar(createdCar);
+            await context.AddCar(createdCar);
             return RedirectToAction(nameof(Index));
         }
 

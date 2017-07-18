@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace ListCarsSite.Models.Entities
 {
@@ -28,15 +29,15 @@ namespace ListCarsSite.Models.Entities
         }
 
 
-        internal void AddCar(CarsCreateVM newCar)
+        internal async Task AddCar(CarsCreateVM newCar)
         {
-            this.Car.Add(new Car
+             Car.Add(new Car
             {
                 Brand = newCar.Brand,
                 Doors = newCar.Doors,
                 TopSpeed = newCar.TopSpeed,
             });
-            this.SaveChanges();
+              await this.SaveChangesAsync();
                      
         }
     }
