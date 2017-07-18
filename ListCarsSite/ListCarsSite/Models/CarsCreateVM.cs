@@ -16,8 +16,8 @@ namespace ListCarsSite.Models
         [Range(3,5,ErrorMessage ="Your car needs to have between 3 and 5 doors")]
         public int  Doors { get; set; }
 
-        [Required]
-        [Range(0,300, ErrorMessage ="Insert top speed")]
+        [Required(ErrorMessage = "Insert top speed")]
+       
         public int TopSpeed { get; set; }
     }
 }

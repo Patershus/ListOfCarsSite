@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
+using Microsoft.EntityFrameworkCore;
+using ListCarsSite.Models.Entities;
 
 namespace ListCarsSite
 {
@@ -16,6 +18,9 @@ namespace ListCarsSite
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+
+            var connString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=CarListDB;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=True;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            services.AddDbContext<ListCarsContext>(o => o.UseSqlServer(connString));
             services.AddMvc();
         }
 
